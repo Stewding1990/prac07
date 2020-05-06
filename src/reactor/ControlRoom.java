@@ -10,7 +10,7 @@ public class ControlRoom extends RadiationMonitor {
      * @param warningThreshold The radiation threshold for when reports should be printed.
      */
     public ControlRoom(String location, double warningThreshold) {
-=
+
     }
 
     /**

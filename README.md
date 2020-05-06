@@ -7,7 +7,7 @@ The exercises for this week are all about taking patterns and using them, or tak
 
 ## Exercise - Understanding the Mystery
 
-The Mystery Pattern example is provided in the practical materials in the package `patterns.mystery`.
+The Mystery Pattern example is provided in the practical materials in the package `mystery`.
 We are going to explore the code.
 Note the changes to the constructor to allow us to pass a string argument, which becomes the internal state of the object.
 
