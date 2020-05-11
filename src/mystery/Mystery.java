@@ -2,7 +2,7 @@ package mystery;
 
 public class Mystery {
 	private String name; 
-	protected Mystery (String s) {
+	private Mystery (String s) {
 		this.name=s; 
 	}
 	 

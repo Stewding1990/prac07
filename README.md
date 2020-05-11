@@ -15,8 +15,6 @@ Note the changes to the constructor to allow us to pass a string argument, which
 But do this in stages, using the refactoring option on the right click menu.
 Don't just do a global replace.
 - Run the code as a Java application and explain what is significant about the trivial result observed.
-- Remove the access modifier protected from the constructor. Run the program again. What happens?
-Replace it with private. Run the program again, and see what happens. Why do we choose protected?
 
 
 ## Exercise - Refactoring with the Factory Pattern
