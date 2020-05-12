@@ -1,4 +1,4 @@
-package patt.coffee;
+package coffee;
 
 public class CoffeeEnums {
 
