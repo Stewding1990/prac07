@@ -1,7 +1,7 @@
 CAB302 Software Development
 ===========================
 
-# Week 10 - Patterns and Refactoring
+# Week 11 - Patterns and Refactoring
 
 The exercises for this week are all about taking patterns and using them, or taking bad code and improving it. We will begin with patterns.
 
