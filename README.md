@@ -1,7 +1,7 @@
 CAB302 Software Development
 ===========================
 
-# Week 11 - Patterns and Refactoring
+# Week 7 - Patterns and Refactoring
 
 The exercises for this week are all about taking patterns and using them, or taking bad code and improving it. We will begin with patterns.
 
@@ -96,32 +96,18 @@ Your task is to complete the implementation of four classes:
 The `ReactorMonitoring` class is provided to help with testing. In its current state, the expected output (when all four classes are complete) is shown below.  If you code is correct, you can expect to see this output every single time, because a seed of `10` is specified when the `RadiationSensor` is constructed.
 
 ```
-2019-04-09 09:13:45 :: moving average :: 7.3043 :: Centre for Nuclear Research
-2019-04-09 09:13:49 :: moving average :: 4.9412 :: Centre for Nuclear Research
-2019-04-09 09:13:53 :: moving average :: 3.4915 :: Centre for Nuclear Research
-2019-04-09 09:13:57 :: moving average :: 3.2289 :: Centre for Nuclear Research
-2019-04-09 09:14:01 :: WARNING :: 8.1881 :: Reactor A Control Room
-2019-04-09 09:14:02 :: moving average :: 4.2207 :: Centre for Nuclear Research
-2019-04-09 09:14:06 :: moving average :: 4.1350 :: Centre for Nuclear Research
-2019-04-09 09:14:10 :: WARNING :: 8.5628 :: Reactor A Control Room
-2019-04-09 09:14:10 :: moving average :: 4.7675 :: Centre for Nuclear Research
-2019-04-09 09:14:14 :: moving average :: 5.0653 :: Centre for Nuclear Research
-2019-04-09 09:14:18 :: moving average :: 4.8217 :: Centre for Nuclear Research
+2022-04-09 09:13:45 :: moving average :: 7.3043 :: Centre for Nuclear Research
+2022-04-09 09:13:49 :: moving average :: 4.9412 :: Centre for Nuclear Research
+2022-04-09 09:13:53 :: moving average :: 3.4915 :: Centre for Nuclear Research
+2022-04-09 09:13:57 :: moving average :: 3.2289 :: Centre for Nuclear Research
+2022-04-09 09:14:01 :: WARNING :: 8.1881 :: Reactor A Control Room
+2022-04-09 09:14:02 :: moving average :: 4.2207 :: Centre for Nuclear Research
+2022-04-09 09:14:06 :: moving average :: 4.1350 :: Centre for Nuclear Research
+2022-04-09 09:14:10 :: WARNING :: 8.5628 :: Reactor A Control Room
+2022-04-09 09:14:10 :: moving average :: 4.7675 :: Centre for Nuclear Research
+2022-04-09 09:14:14 :: moving average :: 5.0653 :: Centre for Nuclear Research
+2022-04-09 09:14:18 :: moving average :: 4.8217 :: Centre for Nuclear Research
 ```
 
 Note that observations need to be logged upon update, not upon report generation. And when reported, the radiation levels must be rounded to four decimal places.
-
-
-## Exercise - Assignment Refactoring
-
-Good programmers don't write code for computers, they write code for humans.
-
-Take at least one class from your assignment, and greatly improve it. Among other things, you should:
-
-- Rename
-- Encapsulate conditionals in methods
-- Extract methods from endless line after line code
-- Get rid of magic numbers (Extract constant)
-
-Make sure you re-run your tests after each refactoring to ensure that the behaviour of the code remains the same.
 
