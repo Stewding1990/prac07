@@ -2,6 +2,9 @@ package reactor;
 
 
 public class ResearchCentre extends RadiationMonitor {
+    private String location;
+    private double totalObservedRadiation;
+    private int observationCount;
 
     /**
      * Constructs a ResearchCentre object, which observes reactor radiation readings
@@ -11,13 +14,20 @@ public class ResearchCentre extends RadiationMonitor {
      * @param location An arbitrary location.
      */
     public ResearchCentre(String location) {
-
+        super(location);
+        observationCount = 0;
+        totalObservedRadiation = 0.0;
     }
 
     /**
      * Updates the monitor with a new observation and prints a report.
      */
     public void update(Subject subject) {
+        RadiationSensor sensor = (RadiationSensor) subject;
+         double ObservedRadiation = sensor.getRadiation();
+         observationCount++;
+         totalObservedRadiation += ObservedRadiation;
+        System.out.println(generateReport());
 
     }
 
@@ -27,7 +37,9 @@ public class ResearchCentre extends RadiationMonitor {
      * made so far, and dividing by the quantity of observations so far.
      */
     public String generateReport() {
-
+        double average = totalObservedRadiation / observationCount;
+        String report = String.format("%s :: moving average :: %.4f :: %s", now(), average, getLocation());
+        return report;
     }
 
 }

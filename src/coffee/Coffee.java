@@ -1,35 +1,24 @@
 package coffee;
 
 import java.util.ArrayList;
+import coffee.CoffeeEnums.Ingredient;
+import coffee.CoffeeEnums.Type;
 
 public class Coffee {
-    String type;
-    double cost;
-    ArrayList<String> ingredients;
+    ArrayList<Ingredient> ingredients;
+    Type type;
 
-    public Coffee(ArrayList<String> ingredients, String type) {
-        this.type = type;
-
+    public Coffee(ArrayList<Ingredient> ingredients, Type type) {
         this.ingredients = ingredients;
-
-        double sum = 0;
-        for (String ingredient : ingredients) {
-            if (ingredient == "espresso") {
-                sum += 0.5;
-            } else if (ingredient == "milk") {
-                sum += 1.0;
-            } else if (ingredient == "chocolate") {
-                sum += 1.5;
-            } else {
-                sum += 0;
-            }
-        }
-        this.cost = sum;
-
+        this.type = type;
     }
 
     public double getCost() {
-        return cost;
+        double sum = 0;
+        for (Ingredient ingredient : ingredients) {
+            sum += ingredient.getCost();
+        }
+        return sum;
     }
 
     public double getPrice() {
@@ -45,8 +34,8 @@ public class Coffee {
 
     public String listIngredients() {
         String string = "";
-        for (String ingredient : ingredients) {
-            string += ingredient;
+        for (Ingredient ingredient : ingredients) {
+            string += ingredient.toString();
             string += "\n";
         }
         return string;

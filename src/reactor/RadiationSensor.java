@@ -1,6 +1,11 @@
 package reactor;
 
+import java.util.Random;
+
 public class RadiationSensor extends Subject {
+    private String location;
+    private Random random;
+    private Double radiation;
 
     /**
      * Constructs a RadiationSensor object
@@ -10,6 +15,8 @@ public class RadiationSensor extends Subject {
      *                  readings.
      */
     public RadiationSensor(String location, int seed) {
+        this.location = location;
+        this.random =  new Random(seed);
 
     }
 
@@ -19,6 +26,7 @@ public class RadiationSensor extends Subject {
      * @return location
      */
     public String getLocation() {
+        return location;
 
     }
 
@@ -28,6 +36,7 @@ public class RadiationSensor extends Subject {
      * @return radiation
      */
     public double getRadiation() {
+        return radiation;
 
     }
 
@@ -36,7 +45,8 @@ public class RadiationSensor extends Subject {
      * the change.
      */
     public void readRadiation() {
-
+        radiation = random.nextDouble() * 10.0;
+        notifyObservers();
     }
 
 }
